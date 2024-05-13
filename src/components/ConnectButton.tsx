@@ -12,15 +12,22 @@ export default function ConnectButton() {
 	// 		setCount(Number(response.data));
 	// 	});
 	// }, []);
+	// useEffect(() => {
+	// 	axios.get("http://89.116.22.98:5000/").then((response) => {
+	// 		// console.log(response.data);
+	// 		setCount(Number(response.data));
+	// 	});
+	// }, []);
 
 	// const sendRequest = () => {
 	// 	const body = {
 	// 		count: count + 1,
 	// 	};
+	// 	// console.log(body);
 	// 	axios
-	// 		.post("http://localhost:5000/", body)
+	// 		.post("http://89.116.22.98:5000/", body)
 	// 		.then(function (response) {
-	// 			console.log(response.data);
+	// 			// console.log(response.data);
 	// 			setCount(response.data);
 	// 			// console.log(count);
 	// 		})

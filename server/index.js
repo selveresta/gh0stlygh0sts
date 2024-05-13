@@ -7,7 +7,13 @@ const port = 5000;
 app.use(json());
 app.use(
 	cors({
-		origin: ["http://gh0stlygh0sts.fun/", "http://gh0stlygh0sts.fun/airdrop", "http://89.116.22.98", "http://localhost:3000"],
+		origin: [
+			"http://gh0stlygh0sts.fun/",
+			"http://gh0stlygh0sts.fun/airdrop",
+			"http://89.116.22.98",
+			"http://89.116.22.98/airdrop",
+			"http://localhost:3000",
+		],
 	})
 );
 
