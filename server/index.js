@@ -5,7 +5,11 @@ const app = express();
 const port = 5000;
 
 app.use(json());
-app.use(cors());
+app.use(
+	cors({
+		origin: ["http://gh0stlygh0sts.fun/", "http://gh0stlygh0sts.fun/airdrop"],
+	})
+);
 
 app.use(function (req, res, next) {
 	//Enabling CORS
