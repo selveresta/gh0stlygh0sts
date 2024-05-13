@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 
-export default function ConnectButton() {
+export default function ConnectButton1() {
 	const [count, setCount] = useState<number>(0);
 
 	const btn = useRef<HTMLButtonElement>(null);
 
 	useEffect(() => {
-		axios.get("http://localhost:5000/").then((response) => {
+		axios.get("http://localhost:5000/count").then((response) => {
 			console.log(response.data);
 			setCount(Number(response.data));
 		});
@@ -18,7 +18,7 @@ export default function ConnectButton() {
 			count: count + 1,
 		};
 		axios
-			.post("http://localhost:5000/", body)
+			.post("http://localhost:5000/count", body)
 			.then(function (response) {
 				console.log(response.data);
 				setCount(response.data);
