@@ -5,26 +5,23 @@ const app = express();
 const port = 5000;
 
 app.use(json());
-app.use(
-	cors({
-		origin: [
-			"http://gh0stlygh0sts.fun/",
-			"http://gh0stlygh0sts.fun/airdrop",
-			"http://89.116.22.98",
-			"http://89.116.22.98/airdrop",
-			"http://localhost:3000",
-		],
-	})
-);
+// app.use(
+// 	cors({
+// 		origin: [
+// 			"http://gh0stlygh0sts.fun/",
+// 			"http://gh0stlygh0sts.fun/airdrop",
+// 			"http://89.116.22.98",
+// 			"http://89.116.22.98/airdrop",
+// 			"http://localhost:3000",
+// 		],
+// 	})
+// );
 
 app.use(function (req, res, next) {
 	//Enabling CORS
 	res.header("Access-Control-Allow-Origin", "*");
-	res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-	res.header(
-		"Access-Control-Allow-Headers",
-		"Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization"
-	);
+	res.header("Access-Control-Allow-Methods", "GET, PUT, PATCH, POST, DELETE");
+	res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
 	next();
 });
 
